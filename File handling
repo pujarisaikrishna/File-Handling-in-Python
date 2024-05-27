@@ -1,0 +1,39 @@
+#file handling
+try:
+    file = open('sai.txt', 'r')
+    print(file.read())
+    file.close()
+except FileNotFoundError:
+    print('please check your file name')
+-----------------------------------------------------------
+try:
+    file = open('sai.txt', 'w')
+    file.write('sai kiran')
+    file.close()
+except FileNotFoundError:
+    print('please check your file name')
+----------------------------------------------------------   
+file = open('sai.txt', 'r+')
+data = file.read()
+print(data)
+file.write('vizag, hyderabad, bangalore')
+data1 = file.read()
+print(data1)
+print('hi')
+file.close()
+-----------------------------------------------------------
+#readline()
+file = open('sai.txt', 'r')
+for x in range(5):
+    data = file.readline().strip()
+    print(data)
+file.close()
+
+
+file = open('sai.txt', 'r')
+data = file.readline()
+while data !='':
+    print(data, end=" ")
+    data = file.readline()
+    
+file.close()
