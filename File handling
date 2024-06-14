@@ -22,6 +22,12 @@ print(data1)
 print('hi')
 file.close()
 -----------------------------------------------------------
+file = open("sai.txt", 'a+')
+file.write("amazon and infosys")
+file = open("sai.txt", 'r')
+print(file.read())
+file.close()
+----------------------------------------------------------
 #readline()
 file = open('sai.txt', 'r')
 for x in range(5):
